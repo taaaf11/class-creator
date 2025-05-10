@@ -1,0 +1,34 @@
+document: \
+"Classes:\n" \
+class_def \
+("\n" class_def)*
+// "Inheritances:\n" \
+// inheritance_def \
+// ("\n" inheritance_def)* \
+// WS \
+
+
+
+// inheritance_def: CLASS_NAME ":" CLASS_NAME (", " CLASS_NAME)*
+
+class_def: "class" CLASS_NAME inheritance_def "{" \
+attr_def \
+("\n" attr_def)* \
+"}"
+
+inheritance_def: ":" CLASS_NAME (", " CLASS_NAME)*
+
+attr_def: public_attr_def | protected_attr_def | private_attr_def
+
+public_attr_def: "+" DATA_TYPE " " ATTR_NAME
+protected_attr_def: "#" DATA_TYPE " " ATTR_NAME
+private_attr_def: "-" DATA_TYPE " " ATTR_NAME
+
+CLASS_NAME: WORD
+
+ATTR_NAME: WORD
+DATA_TYPE: WORD
+
+%import common.WORD
+%import common.WS
+%ignore WS
