@@ -5,6 +5,7 @@ This program creates classes with getters and setters of mentioned attributes.
 
 ### Example
 
+`code.file` (filename can have any extension)
 ```
 class Person {
   #int id
@@ -18,6 +19,7 @@ class Student: Person {
 
 The above code generates the following C++ code:
 
+`output_file.cpp`
 ```cpp
 class Person {
 protected:
@@ -52,9 +54,8 @@ public:
 
 ### Usage
 ```
-python main.py FILE_NAME -o output_file.cpp
+python main.py code.file -o output_file.cpp
 ```
 
-where `FILE_NAME` is the file containing code for generating and the `output_file.cpp` is the file which would contain  
+where `code.file` is the file containing code for generating and the `output_file.cpp` is the file which would contain  
 generated C++ code.
-```
