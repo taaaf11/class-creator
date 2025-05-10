@@ -20,14 +20,14 @@ class Attribute:
     
     def gen_getter_setter(self) -> str:
         getter = f"""\
-            {self.data_type} get{self.name.capitalize()}() {{
-                return {self.name};
-            }}\
+    {self.data_type} get{self.name.capitalize()}() {{
+        return {self.name};
+    }}\
             """
         setter = f"""\
-            void set{self.name.capitalize()}({self.data_type} {self.name}) {{
-                this->{self.name} = {self.name}
-            }}\
+    void set{self.name.capitalize()}({self.data_type} {self.name}) {{
+        this->{self.name} = {self.name};
+    }}\
             """
         return f"{getter}\n{setter}"
     

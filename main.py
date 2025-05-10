@@ -36,3 +36,4 @@ with open(cmd_args.output, "w") as f:
     class_: CppClass
     for class_ in transformed_tree.children:
         f.write(class_.gen_stmt())
+        f.write("\n")
