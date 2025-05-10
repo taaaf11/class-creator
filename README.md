@@ -23,8 +23,8 @@ The above code generates the following C++ code:
 ```cpp
 class Person {
 protected:
-	int id;
-	string name;
+    int id;
+    string name;
 public:
     int getId() {
         return id;
@@ -41,7 +41,7 @@ public:
 };
 class Student: public Person {
 protected:
-	float gpa;
+    float gpa;
 public:
     float getGpa() {
         return gpa;

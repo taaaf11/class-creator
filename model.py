@@ -59,17 +59,17 @@ class CppClass:
         
         
         for attr in private_attrs:
-            class_name += "\t" + attr.gen_decl() + "\n"
+            class_name += "    " + attr.gen_decl() + "\n"
         
         if protected_attrs:
             class_name += "protected:\n"        
             for attr in protected_attrs:
-                class_name += "\t" + attr.gen_decl() + "\n"
+                class_name += "    " + attr.gen_decl() + "\n"
         
         if public_attrs:
             class_name += "public:\n"
             for attr in public_attrs:
-                class_name += "\t" + attr.gen_decl() + "\n"
+                class_name += "    " + attr.gen_decl() + "\n"
         
         # getters and setters
         if "public:" not in class_name:
