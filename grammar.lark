@@ -1,15 +1,7 @@
 document: \
-"Classes:\n" \
 class_def \
 ("\n" class_def)*
-// "Inheritances:\n" \
-// inheritance_def \
-// ("\n" inheritance_def)* \
-// WS \
 
-
-
-// inheritance_def: CLASS_NAME ":" CLASS_NAME (", " CLASS_NAME)*
 
 class_def: "class" CLASS_NAME (inheritance_def)* "{" \
 attr_def \
