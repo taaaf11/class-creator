@@ -42,6 +42,9 @@ class CppClass:
     attributes: list[Attribute] = field(default_factory=list)
     
     def gen_stmt(self) -> str:
+        # print(f"{self.name=}")
+        # print(f"{self.inherits_from=}")
+        # print(f"{self.attributes=}")
         class_name = f"class {self.name}"
         if self.inherits_from:
             access_level_added = ["public " + _class_name for _class_name in self.inherits_from]

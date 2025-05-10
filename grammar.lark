@@ -11,7 +11,7 @@ class_def \
 
 // inheritance_def: CLASS_NAME ":" CLASS_NAME (", " CLASS_NAME)*
 
-class_def: "class" CLASS_NAME inheritance_def "{" \
+class_def: "class" CLASS_NAME (inheritance_def)* "{" \
 attr_def \
 ("\n" attr_def)* \
 "}"

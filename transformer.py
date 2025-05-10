@@ -5,9 +5,16 @@ from model import AccessLevel, Attribute, CppClass
 
 class MyTransformer(Transformer):
     def class_def(self, children):
+        # print(children)
         class_name = children[0]
-        inherits_from = children[1]
-        attributes = children[2:]
+
+        # doesn't inherit from any other
+        if isinstance(children[1], Attribute):
+            inherits_from = []
+            attributes = children[1:]
+        else:
+            inherits_from = children[1]
+            attributes = children[2:]
         
         return CppClass(class_name, inherits_from, attributes)
         
